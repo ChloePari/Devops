@@ -20,12 +20,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-#      - name: Set up JDK 21
-#        uses: actions/setup-java@v4
-#        with:
-#          distribution: 'temurin'
-#          java-version: '21'
-#          cache: 'gradle'
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'gradle'
 #
 #      - name: Run Tests
 #        run: |
@@ -41,6 +41,6 @@ jobs:
 #            MyService/build/test-results/**/*.xml
       - name: Build Docker images
         run: |
-          docker build -t myservice:latest -f MyService/Dockerfile .
+          docker build -t myservice:latest -f MyService/Dockerfile MyService
 
 
