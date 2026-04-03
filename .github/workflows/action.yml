@@ -39,7 +39,6 @@ jobs:
 #        with:
 #          files: |
 #            MyService/build/test-results/**/*.xml
-
       - name: Build Docker images
         run: |
           docker build -t myservice:latest -f MyService/Dockerfile .
