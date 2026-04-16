@@ -10,6 +10,7 @@ permissions:
   contents: read
   security-events: write
   actions: read
+  checks: write
 
 jobs:
   build-and-test:
@@ -34,7 +35,7 @@ jobs:
           ./gradlew test
 
       - name: Publish Test Results
-        uses: ChloePari/publish-unit-test-result-action@v2
+        uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
           files: |
