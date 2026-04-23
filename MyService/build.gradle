@@ -33,6 +33,13 @@ jacoco {
     toolVersion = "0.8.10"
 }
 
+tasks.named('jacocoTestReport') {
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
 sonar {
     properties {
         property "sonar.projectKey", "ChloePari_Devops"
