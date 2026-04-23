@@ -35,7 +35,7 @@ jacoco {
 
 sonar {
     properties {
-        property "sonar.projectKey", "ChloePari_Devops"
+        property "sonar.projectKey", "Devops"
         property "sonar.organization", "chloepari-1"
         property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.sources", "src/main/java"
