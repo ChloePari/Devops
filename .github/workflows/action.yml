@@ -49,12 +49,12 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
       - name: Build and analyze
         env:
-        SONAR_HOST_URL: https://sonarcloud.io
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          cd ./MyService
-          chmod +x gradlew
-          ./gradlew build sonar --info   
+          SONAR_HOST_URL: https://sonarcloud.io
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          run: |
+            cd ./MyService
+            chmod +x gradlew
+            ./gradlew build sonar --info   
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
